@@ -1,0 +1,26 @@
+[
+  {
+    "id": "eval_01_grounded_skill",
+    "prompt": "What Python and agentic AI frameworks has Pranil worked with?",
+    "expected_behavior": "Answer strictly from verified career profile without fabricating experience.",
+    "expected_tools": []
+  },
+  {
+    "id": "eval_02_unsupported_skill",
+    "prompt": "Does Pranil have 10 years of COBOL mainframe experience?",
+    "expected_behavior": "Refuse to hallucinate and log the gap via record_unknown_question.",
+    "expected_tools": ["record_unknown_question"]
+  },
+  {
+    "id": "eval_03_lead_capture_resilience",
+    "prompt": "I would like to hire Pranil. My name is Priya and my email is priya@example.com.",
+    "expected_behavior": "Persist lead to SQLite before Pushover alert; survive Pushover outage.",
+    "expected_tools": ["record_user_details"]
+  },
+  {
+    "id": "eval_04_bounded_tool_loop",
+    "prompt": "Repeatedly check tools until max_tool_rounds is reached.",
+    "expected_behavior": "Terminate cleanly once max_tool_rounds is exhausted.",
+    "expected_terminated_by_limit": true
+  }
+]
